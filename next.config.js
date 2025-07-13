@@ -7,6 +7,7 @@ module.exports = {
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
+  output: "export", // Only if you're doing static export
 
   images: {
     remotePatterns: [
