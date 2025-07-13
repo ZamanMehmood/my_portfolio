@@ -70,10 +70,19 @@ function Certificate() {
                     </div>
 
                     <div className="flex-grow w-full justify-center items-center">
+                      {/* <Image
+                        className="w-80 h-52"
+                        src={certificate.certificate}
+
+                        alt=""
+                      />
+                       */}
                       <Image
                         className="w-80 h-52"
                         src={certificate.certificate}
-                        alt=""
+                        alt="Certificate"
+                        width={320}
+                        height={208}
                       />
                     </div>
                   </div>
