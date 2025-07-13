@@ -2,13 +2,16 @@
 import { certificate } from "@/utils/data/certificates";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import lottieFile from '../../../assets/lottie/certificates.json';
+import lottieFile from "../../../assets/lottie/certificates.json";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
 function Certificate() {
   return (
-    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <div
+      id="education"
+      className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]"
+    >
       <Image
         src="/section.svg"
         alt="Hero"
@@ -41,47 +44,47 @@ function Certificate() {
           </div>
 
           <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-
-              {
-                certificate.map(certificate => (
-                  <GlowCard key={certificate.id} identifier={`certificate-${certificate.id}`}>
-                    <div className="p-3 w-full  text-white">
-                      <Image
-                        src="/blur-23.svg"
-                        alt="Hero"
-                        width={1080}
-                        height={200}
-                        className="absolute bottom-0 opacity-80"
-                      />
-                      <div className="flex items-center gap-x-4 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={24} />
-                        </div>
-                        <div className="flex flex-1 items-center">
-                          <p className="text-sm font-medium uppercase">
-                            {certificate.title}
-                          </p>
-
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+              {certificate.map((certificate) => (
+                <GlowCard
+                  key={certificate.id}
+                  identifier={`certificate-${certificate.id}`}
+                >
+                  <div className="p-3 w-full  text-white">
+                    <Image
+                      src="/blur-23.svg"
+                      alt="Hero"
+                      width={1080}
+                      height={200}
+                      className="absolute bottom-0 opacity-80"
+                    />
+                    <div className="flex items-center gap-x-4 px-3 py-5">
+                      <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                        <BsPersonWorkspace size={24} />
                       </div>
-
-                      <div className="flex-grow w-full justify-center items-center">
-                        <img className="w-80 h-52" src=
-                          {certificate.certificate}
-                          alt="" />
+                      <div className="flex flex-1 items-center">
+                        <p className="text-sm font-medium uppercase">
+                          {certificate.title}
+                        </p>
                       </div>
-
                     </div>
-                  </GlowCard>
-                ))
-              }
+
+                    <div className="flex-grow w-full justify-center items-center">
+                      <Image
+                        className="w-80 h-52"
+                        src={certificate.certificate}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </GlowCard>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Certificate;
