@@ -4,11 +4,6 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
-  output: "export", // Only if you're doing static export
-
   images: {
     remotePatterns: [
       {
